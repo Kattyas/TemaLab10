@@ -14,6 +14,9 @@ public class Main {
         int i = 15;
         int j = 20;
         int k = 55;
+        int l = 32;
+        float m = 55.55f;
+        float n = 0.0254f;
 
 
         System.out.println("Rezultatul adunarii este: " + operAdunare(c, d));
@@ -44,6 +47,23 @@ public class Main {
 
         int media = mediaCelorTreiNumere(i,j,k)/d;
         System.out.println("Media celor trei numere este:" + ( media ));
+
+
+        imagineaJava("    +”””””+    ");
+        imagineaJava("   [| o o |]   ");
+        imagineaJava("    |  ^  |    ");
+        imagineaJava("    | ‘-’ |    ");
+        imagineaJava("    +-----+    ");
+
+
+        int rest = restuImpartire(h,e);
+        System.out.println("Restul impartirii celor doua numere este:" + ( rest ));
+
+        float celsius = conversie(e,h,k,l);
+        System.out.println("55 Grade Fahrenheit inseamna : " + ( celsius ) + " grade celsius ");
+
+        double metrii = distantaInInchi(m,n);
+        System.out.println("55.55 inchi inseamna " + (metrii ) + " metrii" );
 
 
 
@@ -83,9 +103,9 @@ public class Main {
         int rezultatOperatiuneD = IntE + IntI / IntD * IntC - IntG % IntD;
         return rezultatOperatiuneD;
     }
-//2. Scrieti care o metoda java pentru fiecare din urmatoarele operatii matematice: adunare, scadere, inmultire, impartire./n
-//   Fiecare metoda ar trebui sa primeasca doi parametrii de tip numar, sa execute operatia, si sa returneze rezultatul./n
-//   Apoi apelati metoda in main cu valorile cu care doriti sa executati operatia.
+// 2. Scrieti care o metoda java pentru fiecare din urmatoarele operatii matematice: adunare, scadere, inmultire, impartire./n
+//    Fiecare metoda ar trebui sa primeasca doi parametrii de tip numar, sa execute operatia, si sa returneze rezultatul./n
+//    Apoi apelati metoda in main cu valorile cu care doriti sa executati operatia.
 
 
     public static int adunare(int primul, int aldoilea) {
@@ -114,14 +134,48 @@ public class Main {
         System.out.println(cuvant);
 
     }
-//4.Scrieti o metoda java, care sa primeasca 3 parametrii de tip numar, si sa returneze media numerelor.
+// 4.Scrieti o metoda java, care sa primeasca 3 parametrii de tip numar, si sa returneze media numerelor.
 
     public static int mediaCelorTreiNumere(int intI, int intJ, int intK){
         int media = (intI + intJ + intK);
         return media;
 
+    }
+// 5.Scrieti o metoda java, care sa afiseze urmatorul model:
+
+    public static void imagineaJava(String imagine) {
+        System.out.println(imagine);
 
     }
+// 6.Scrieti o metoda java, care sa returneze restul impartirii a doua numere
+
+    public static int restuImpartire(int intH, int intE) {
+        int rest = (intH % intE);
+        return rest;
+
+    }
+// 7.Scrieti o metoda java, care sa primeasca ca si parametru un numar, /n
+//     care sa reprezinte temperatura in Fahrenheit, si sa returneze temperatura in Celsius./n
+//     Formula de calcul este: C = 5/9 * (F -32)
+
+    public static float conversie(float intE, float intH, float intK, float intL) {
+        float celsius = intE / intH * (intK - intL);
+        return celsius;
+    }
+//  8.Scrieti o metoda java, care sa primeasca ca si parametru un numar real, /n
+//    care sa reprezinte distanta in inch, si sa returneze distanta in metrii
+
+    public static float distantaInInchi(float doubleM, float doubleN){
+        float metrii = doubleM * doubleN;
+        return metrii;
+    }
+// 9. Scrieti o metoda java, care primeste distanta (in metrii) si /n
+//    timpul (ca si 3 numere: ore, minute, secunde), si afiseaza viteza, /n
+//    in metrii pe secunda, kilometrii pe ora si mile pe ora. /n
+//        (Indiciu: 1 mila = 1609 metrii)
+
+
+
 
 
 }
