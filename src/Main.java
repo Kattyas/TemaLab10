@@ -5,65 +5,81 @@ public class Main {
         arataNumeleMeu("Catalin");
         int a = -5;
         int b = -3;
-        int c =  2;
-        int d =  3;
-        int e =  5;
-        int f =  6;
-        int g =  8;
-        int h =  9;
+        int c = 2;
+        int d = 3;
+        int e = 5;
+        int f = 6;
+        int g = 8;
+        int h = 9;
         int i = 15;
         int j = 20;
         int k = 55;
 
 
+        System.out.println("Rezultatul adunarii este: " + operAdunare(c, d));
+        System.out.println("Rezultatul impartirii este: " + operImpartire(h, c));
+        System.out.println("Rezultatul operatiune a: -5+8*6 este: " + operatiuneaA(a, g, f));
+        System.out.println("Rezultatul operatiune b: (55+9)%9 este: " + operatiuneaB(k, h));
+        System.out.println("Rezultatul operatiune c: 20+ -3*5/8 este: " + operatiuneaC(b, e, g, j));
+        System.out.println("Rezultatul operatiune d: 5 + 15 / 3 * 2 - 8 % 3 este: " + operatiuneaD(c, d, e, g, i));
 
-        System.out.println("Rezultatul adunarii este: " + operAdunare(c,d));
-        System.out.println("Rezultatul impartirii este: " + operImpartire(h,c));
-        System.out.println("Rezultatul operatiune a: -5+8*6 este: " + operatiuneaA(a,g,f));
-        System.out.println("Rezultatul operatiune b: (55+9)%9 este: " + operatiuneaB(k,h));
-        System.out.println("Rezultatul operatiune c: 20+ -3*5/8 este: " + operatiuneaC(b,e,g,j));
-        System.out.println("Rezultatul operatiune d: 5 + 15 / 3 * 2 - 8 % 3 este: " + operatiuneaD(c,d,e,g,i));
 
-
-        System.out.println("Rezultatul adunarii este:" + adunare(a,b));
+        System.out.println("Rezultatul adunarii este:" + adunare(a, b));
 
         int doi = scadere(a, b);
-        System.out.println("Rezultatul scaderii este:" +(doi));
+        System.out.println("Rezultatul scaderii este:" + (doi));
 
         int trei = inmultire(a, b);
-        System.out.println("Rezultatul inmultirii este:" +(trei));
+        System.out.println("Rezultatul inmultirii este:" + (trei));
 
         float rezultatulImpartirii = impartire(a, b);
-        System.out.println("Rezultatul impartirii este:" +(rezultatulImpartirii));
+        System.out.println("Rezultatul impartirii este:" + (rezultatulImpartirii));
+
+
+        cuvantulJava("     j    a   v     v    a       ");
+        cuvantulJava("     j   a a   v   v    a a      ");
+        cuvantulJava("  j  j  aaaaa   v v    aaaaa     ");
+        cuvantulJava("   jj  a     a   v    a     a    ");
+
+
+        int media = mediaCelorTreiNumere(i,j,k)/d;
+        System.out.println("Media celor trei numere este:" + ( media ));
 
 
 
 
     }
-    public static void arataNumeleMeu(String nume){
-        System.out.println(" Salut "+"\n" + nume +"!");
+
+    public static void arataNumeleMeu(String nume) {
+        System.out.println(" Salut " + "\n" + nume + "!");
     }
-    public static int operAdunare(int alTreileaNumar, int alPatruleaNumar){
+
+    public static int operAdunare(int alTreileaNumar, int alPatruleaNumar) {
         int rezultatulAdunarii = alTreileaNumar + alPatruleaNumar;
         return rezultatulAdunarii;
     }
-    public static float operImpartire(float IntH, float IntC){
+
+    public static float operImpartire(float IntH, float IntC) {
         float rezultatulImpartirii = IntH / IntC;
         return rezultatulImpartirii;
     }
-    public static int operatiuneaA(int IntA, int IntG, int IntF){
+
+    public static int operatiuneaA(int IntA, int IntG, int IntF) {
         int rezultatOperatiuneA = IntA + IntG * IntF;
         return rezultatOperatiuneA;
     }
-    public static int operatiuneaB(int IntK, int IntH){
+
+    public static int operatiuneaB(int IntK, int IntH) {
         int rezultatOperatiuneB = (IntK + IntH) % IntH;
         return rezultatOperatiuneB;
     }
-    public static float operatiuneaC(float IntB, float IntE, float IntG, float IntJ){
+
+    public static float operatiuneaC(float IntB, float IntE, float IntG, float IntJ) {
         float rezultatOperatiuneC = IntJ + IntB * IntE / IntG;
         return rezultatOperatiuneC;
     }
-    public static int operatiuneaD(int IntC, int IntD, int IntE, int IntG, int IntI){
+
+    public static int operatiuneaD(int IntC, int IntD, int IntE, int IntG, int IntI) {
         int rezultatOperatiuneD = IntE + IntI / IntD * IntC - IntG % IntD;
         return rezultatOperatiuneD;
     }
@@ -77,25 +93,44 @@ public class Main {
         return unu;
     }
 
-    public static int scadere(int primul, int aldoilea){
+    public static int scadere(int primul, int aldoilea) {
         int doi = primul - aldoilea;
         return doi;
     }
-    public static int inmultire(int primul, int aldoilea){
-        int trei = primul * aldoilea ;
+
+    public static int inmultire(int primul, int aldoilea) {
+        int trei = primul * aldoilea;
         return trei;
     }
-    public static float impartire(float primul, float aldoilea){
-        float rezultatulImpartirii = primul / aldoilea ;
+
+    public static float impartire(float primul, float aldoilea) {
+        float rezultatulImpartirii = primul / aldoilea;
         return rezultatulImpartirii;
     }
 
 // 3. Scrieti o metoda java, care sa afiseze urmatorul model:
 
+    public static void cuvantulJava(String cuvant) {
+        System.out.println(cuvant);
 
+    }
+//4.Scrieti o metoda java, care sa primeasca 3 parametrii de tip numar, si sa returneze media numerelor.
 
-
-
+    public static int mediaCelorTreiNumere(int intI, int intJ, int intK){
+        int media = (intI + intJ + intK);
+        return media;
 
 
     }
+
+
+}
+
+
+
+
+
+
+
+
+
