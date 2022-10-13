@@ -1,22 +1,101 @@
-
+// 1. Pentru exercitiile din clasa main() de data trecuta, creati metode separate pentru fiecare,/n
+//           tot in clasa Main.java, si apoi apelati-le in metoda main().
 public class Main {
     public static void main(String[] args) {
         arataNumeleMeu("Catalin");
         int a = -5;
         int b = -3;
-        int c = 2;
-        int d = 3;
-        int e = 5;
-        int f = 6;
-        int g = 8;
-        int h = 9;
+        int c =  2;
+        int d =  3;
+        int e =  5;
+        int f =  6;
+        int g =  8;
+        int h =  9;
         int i = 15;
         int j = 20;
         int k = 55;
+
+
+
+        System.out.println("Rezultatul adunarii este: " + operAdunare(c,d));
+        System.out.println("Rezultatul impartirii este: " + operImpartire(h,c));
+        System.out.println("Rezultatul operatiune a: -5+8*6 este: " + operatiuneaA(a,g,f));
+        System.out.println("Rezultatul operatiune b: (55+9)%9 este: " + operatiuneaB(k,h));
+        System.out.println("Rezultatul operatiune c: 20+ -3*5/8 este: " + operatiuneaC(b,e,g,j));
+        System.out.println("Rezultatul operatiune d: 5 + 15 / 3 * 2 - 8 % 3 este: " + operatiuneaD(c,d,e,g,i));
+
+
+        System.out.println("Rezultatul adunarii este:" + adunare(a,b));
+
+        int doi = scadere(a, b);
+        System.out.println("Rezultatul scaderii este:" +(doi));
+
+        int trei = inmultire(a, b);
+        System.out.println("Rezultatul inmultirii este:" +(trei));
+
+        float rezultatulImpartirii = impartire(a, b);
+        System.out.println("Rezultatul impartirii este:" +(rezultatulImpartirii));
+
+
+
+
     }
     public static void arataNumeleMeu(String nume){
         System.out.println(" Salut "+"\n" + nume +"!");
     }
+    public static int operAdunare(int alTreileaNumar, int alPatruleaNumar){
+        int rezultatulAdunarii = alTreileaNumar + alPatruleaNumar;
+        return rezultatulAdunarii;
+    }
+    public static float operImpartire(float IntH, float IntC){
+        float rezultatulImpartirii = IntH / IntC;
+        return rezultatulImpartirii;
+    }
+    public static int operatiuneaA(int IntA, int IntG, int IntF){
+        int rezultatOperatiuneA = IntA + IntG * IntF;
+        return rezultatOperatiuneA;
+    }
+    public static int operatiuneaB(int IntK, int IntH){
+        int rezultatOperatiuneB = (IntK + IntH) % IntH;
+        return rezultatOperatiuneB;
+    }
+    public static float operatiuneaC(float IntB, float IntE, float IntG, float IntJ){
+        float rezultatOperatiuneC = IntJ + IntB * IntE / IntG;
+        return rezultatOperatiuneC;
+    }
+    public static int operatiuneaD(int IntC, int IntD, int IntE, int IntG, int IntI){
+        int rezultatOperatiuneD = IntE + IntI / IntD * IntC - IntG % IntD;
+        return rezultatOperatiuneD;
+    }
+//2. Scrieti care o metoda java pentru fiecare din urmatoarele operatii matematice: adunare, scadere, inmultire, impartire./n
+//   Fiecare metoda ar trebui sa primeasca doi parametrii de tip numar, sa execute operatia, si sa returneze rezultatul./n
+//   Apoi apelati metoda in main cu valorile cu care doriti sa executati operatia.
+
+
+    public static int adunare(int primul, int aldoilea) {
+        int unu = primul + aldoilea;
+        return unu;
+    }
+
+    public static int scadere(int primul, int aldoilea){
+        int doi = primul - aldoilea;
+        return doi;
+    }
+    public static int inmultire(int primul, int aldoilea){
+        int trei = primul * aldoilea ;
+        return trei;
+    }
+    public static float impartire(float primul, float aldoilea){
+        float rezultatulImpartirii = primul / aldoilea ;
+        return rezultatulImpartirii;
+    }
+
+// 3. Scrieti o metoda java, care sa afiseze urmatorul model:
+
+
+
+
+
 
 
     }
