@@ -17,6 +17,9 @@ public class Main {
         int l = 32;
         float m = 55.55f;
         float n = 0.0254f;
+        int distMetrii = 25000;
+        int timpSecunde = 5250;
+
 
 
         System.out.println("Rezultatul adunarii este: " + operAdunare(c, d));
@@ -64,6 +67,10 @@ public class Main {
 
         double metrii = distantaInInchi(m,n);
         System.out.println("55.55 inchi inseamna " + (metrii ) + " metrii" );
+
+
+        float viteza = vitezamasinii(distMetrii, timpSecunde);
+        System.out.println(viteza);
 
 
 
@@ -175,6 +182,10 @@ public class Main {
 //        (Indiciu: 1 mila = 1609 metrii)
 
 
+    public static float vitezamasinii(float distMetrii, float timpSecunde ){
+        float viteza = distMetrii/timpSecunde;
+        return viteza;
+    }
 
 
 
