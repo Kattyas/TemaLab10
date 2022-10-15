@@ -21,6 +21,7 @@ public class Main {
         int timpSecunde = 5250;
         int timpMinute = timpSecunde*60;
         int timpOra = timpMinute*60;
+        double mila = 1.609;
 
 
 
@@ -75,7 +76,7 @@ public class Main {
         float viteza = vitezamasinii(distMetrii, timpSecunde );
         System.out.println("9  Cine parcurge 100000 metrii in 5250 secunde are o viteza medie de "+ (viteza) + "m/sec");
         System.out.println("                                               are o viteza medie de "+((((viteza)*60)*60)/1000)+"km/h");
-        System.out.println("            are o viteza medie de "+(((((viteza)*60)*60)/1000)/1609)+"km/h");
+        System.out.println("                                               are o viteza medie de "+((((viteza)*60)*60)/1000)/mila +"mile/h");
 
 
 
