@@ -2,7 +2,7 @@
 //           tot in clasa Main.java, si apoi apelati-le in metoda main().
 public class Main {
     public static void main(String[] args) {
-        arataNumeleMeu("Catalin");
+        arataNumeleMeu("   Catalin");
         int a = -5;
         int b = -3;
         int c = 2;
@@ -17,42 +17,45 @@ public class Main {
         int l = 32;
         float m = 55.55f;
         float n = 0.0254f;
-        int distMetrii = 25000;
+        int distMetrii = 100000;
         int timpSecunde = 5250;
+        int timpMinute = timpSecunde*60;
+        int timpOra = timpMinute*60;
 
 
 
-        System.out.println("Rezultatul adunarii este: " + operAdunare(c, d));
-        System.out.println("Rezultatul impartirii este: " + operImpartire(h, c));
-        System.out.println("Rezultatul operatiune a: -5+8*6 este: " + operatiuneaA(a, g, f));
-        System.out.println("Rezultatul operatiune b: (55+9)%9 este: " + operatiuneaB(k, h));
-        System.out.println("Rezultatul operatiune c: 20+ -3*5/8 este: " + operatiuneaC(b, e, g, j));
-        System.out.println("Rezultatul operatiune d: 5 + 15 / 3 * 2 - 8 % 3 este: " + operatiuneaD(c, d, e, g, i));
+
+        System.out.println("   Rezultatul adunarii este: " + operAdunare(c, d));
+        System.out.println("   Rezultatul impartirii este: " + operImpartire(h, c));
+        System.out.println("   Rezultatul operatiune a: -5+8*6 este: " + operatiuneaA(a, g, f));
+        System.out.println("   Rezultatul operatiune b: (55+9)%9 este: " + operatiuneaB(k, h));
+        System.out.println("   Rezultatul operatiune c: 20+ -3*5/8 este: " + operatiuneaC(b, e, g, j));
+        System.out.println("   Rezultatul operatiune d: 5 + 15 / 3 * 2 - 8 % 3 este: " + operatiuneaD(c, d, e, g, i));
 
 
-        System.out.println("Rezultatul adunarii este:" + adunare(a, b));
+        System.out.println("2. Rezultatul adunarii este:" + adunare(a, b));
 
         int doi = scadere(a, b);
-        System.out.println("Rezultatul scaderii este:" + (doi));
+        System.out.println("   Rezultatul scaderii este:" + (doi));
 
         int trei = inmultire(a, b);
-        System.out.println("Rezultatul inmultirii este:" + (trei));
+        System.out.println("   Rezultatul inmultirii este:" + (trei));
 
         float rezultatulImpartirii = impartire(a, b);
-        System.out.println("Rezultatul impartirii este:" + (rezultatulImpartirii));
+        System.out.println("   Rezultatul impartirii este:" + (rezultatulImpartirii));
 
 
-        cuvantulJava("     j    a   v     v    a       ");
+        cuvantulJava("3.   j    a   v     v    a       ");
         cuvantulJava("     j   a a   v   v    a a      ");
         cuvantulJava("  j  j  aaaaa   v v    aaaaa     ");
         cuvantulJava("   jj  a     a   v    a     a    ");
 
 
         int media = mediaCelorTreiNumere(i,j,k)/d;
-        System.out.println("Media celor trei numere este:" + ( media ));
+        System.out.println("4. Media celor trei numere este:" + ( media ));
 
 
-        imagineaJava("    +”””””+    ");
+        imagineaJava("5.  +”””””+    ");
         imagineaJava("   [| o o |]   ");
         imagineaJava("    |  ^  |    ");
         imagineaJava("    | ‘-’ |    ");
@@ -60,17 +63,21 @@ public class Main {
 
 
         int rest = restuImpartire(h,e);
-        System.out.println("Restul impartirii celor doua numere este:" + ( rest ));
+        System.out.println("6. Restul impartirii celor doua numere este:" + ( rest ));
 
         float celsius = conversie(e,h,k,l);
-        System.out.println("55 Grade Fahrenheit inseamna : " + ( celsius ) + " grade celsius ");
+        System.out.println("7. 55 Grade Fahrenheit inseamna : " + ( celsius ) + " grade celsius ");
 
         double metrii = distantaInInchi(m,n);
-        System.out.println("55.55 inchi inseamna " + (metrii ) + " metrii" );
+        System.out.println("8. 55.55 inchi inseamna " + (metrii ) + " metrii" );
 
 
-        float viteza = vitezamasinii(distMetrii, timpSecunde);
-        System.out.println(viteza);
+        float viteza = vitezamasinii(distMetrii, timpSecunde );
+        System.out.println("9  Cine parcurge 100000 metrii in 5250 secunde are o viteza medie de "+ (viteza) + "m/sec");
+        System.out.println("                                               are o viteza medie de "+((((viteza)*60)*60)/1000)+"km/h");
+        System.out.println("            are o viteza medie de "+(((((viteza)*60)*60)/1000)/1609)+"km/h");
+
+
 
 
 
@@ -78,7 +85,7 @@ public class Main {
     }
 
     public static void arataNumeleMeu(String nume) {
-        System.out.println(" Salut " + "\n" + nume + "!");
+        System.out.println("1. Salut " + "\n" + nume + "!");
     }
 
     public static int operAdunare(int alTreileaNumar, int alPatruleaNumar) {
@@ -110,7 +117,7 @@ public class Main {
         int rezultatOperatiuneD = IntE + IntI / IntD * IntC - IntG % IntD;
         return rezultatOperatiuneD;
     }
-// 2. Scrieti care o metoda java pentru fiecare din urmatoarele operatii matematice: adunare, scadere, inmultire, impartire./n
+// 2. Scrieti cate o metoda java pentru fiecare din urmatoarele operatii matematice: adunare, scadere, inmultire, impartire./n
 //    Fiecare metoda ar trebui sa primeasca doi parametrii de tip numar, sa execute operatia, si sa returneze rezultatul./n
 //    Apoi apelati metoda in main cu valorile cu care doriti sa executati operatia.
 
@@ -185,6 +192,7 @@ public class Main {
     public static float vitezamasinii(float distMetrii, float timpSecunde ){
         float viteza = distMetrii/timpSecunde;
         return viteza;
+
     }
 
 
