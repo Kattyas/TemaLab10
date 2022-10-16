@@ -19,9 +19,9 @@ public class Main {
         float n = 0.0254f;
         int distMetrii = 100000;
         int timpSecunde = 5250;
-        int timpMinute = timpSecunde*60;
-        int timpOra = timpMinute*60;
         double mila = 1.609;
+
+
 
 
 
